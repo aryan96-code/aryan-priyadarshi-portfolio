@@ -8,16 +8,28 @@ export default function Contact() {
   const [formSent, setFormSent] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText(PORTFOLIO_DATA.personal.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(PORTFOLIO_DATA.personal.email);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = PORTFOLIO_DATA.personal.email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch (e) {
+      console.warn('Clipboard copy failed:', e);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.email || !formData.message) return;
     
-    // Trigger mailto link fallback
     const subject = encodeURIComponent(`Portfolio Contact from ${formData.name || 'Visitor'}`);
     const body = encodeURIComponent(formData.message);
     window.location.href = `mailto:${PORTFOLIO_DATA.personal.email}?subject=${subject}&body=${body}`;
