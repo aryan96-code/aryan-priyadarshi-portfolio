@@ -25,9 +25,9 @@ export default function DeveloperJourney() {
       
       {/* Section Header */}
       <div className="space-y-3 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono tracking-widest uppercase shadow-glow-sm">
           <Calendar className="w-3.5 h-3.5" />
-          <span>Chronological Record</span>
+          <span>// 04. QUEST TIMELINE & MILESTONES</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Developer <span className="text-gradient-emerald">Journey</span>
@@ -38,18 +38,18 @@ export default function DeveloperJourney() {
       </div>
 
       {/* Visual Timeline */}
-      <div className="relative pl-6 sm:pl-8 border-l border-slate-800 space-y-10 my-8">
+      <div className="relative pl-6 sm:pl-8 border-l-2 border-slate-800 space-y-10 my-8">
         {events.map((evt, idx) => (
           <div key={idx} className="relative group">
             {/* Timeline Dot */}
-            <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-8 h-8 rounded-full bg-slate-900 border border-slate-700 group-hover:border-emerald-400 flex items-center justify-center transition-all shadow-md">
+            <div className="absolute -left-[33px] sm:-left-[41px] top-1.5 w-8 h-8 rounded-full bg-slate-950 border-2 border-slate-700 group-hover:border-emerald-400 flex items-center justify-center transition-all shadow-md group-hover:scale-110">
               {getEventIcon(evt.type)}
             </div>
 
             {/* Event Card */}
-            <div className="p-5 sm:p-6 rounded-2xl bg-[#0b101c] border border-slate-800 hover:border-emerald-500/30 transition-all space-y-2 shadow-lg">
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0b101c] border border-slate-800 hover:border-emerald-500/40 transition-all space-y-2 shadow-lg hover:-translate-y-1">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <span className="text-xs font-mono font-semibold px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+                <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
                   {evt.year}
                 </span>
                 <span className="text-xs text-slate-500 font-mono capitalize">{evt.type}</span>

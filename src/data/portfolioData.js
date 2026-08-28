@@ -5,33 +5,42 @@ export const PORTFOLIO_DATA = {
     degree: "B.Tech — Computer Science & Engineering (AI & ML)",
     university: "Lovely Professional University",
     period: "August 2025 – Present",
-    tagline: "Building intelligent hardware-software systems, machine learning pipelines, and cloud-backed web platforms.",
-    bio: "I am a Computer Science & Engineering student specializing in AI & ML at Lovely Professional University. I focus on translating complex computational models into real-world applications — from multimodal IoT sensor pipelines for bio-signal detection to local-first cloud-synchronized platforms.",
+    tagline: "Engineering multimodal bio-signal hardware arrays, low-latency Random Forest ML pipelines, and cloud-synchronized web platforms.",
+    bio: "I am a B.Tech Computer Science & Engineering student specializing in AI & ML at Lovely Professional University. I focus on **bridging the gap between hardware sensor arrays and machine learning pipelines**, translating complex bio-signals into **real-time low-latency feedback systems**.",
     location: "Punjab, India",
     email: "aryanpriyadarshi.dev@gmail.com",
     github: "https://github.com/aryanpriyadarshi",
     linkedin: "https://linkedin.com/in/aryan-priyadarshi",
     statusBadge: "Actively Learning & Building Real Projects",
+    level: "LVL 25 STUDENT ENGINEER",
+    xp: "9,280 / 10,000 XP"
   },
+
+  achievements: [
+    { id: "deep-diver", title: "The Deep Diver 🏆", desc: "Explored the entire stack from Hero down to Contact." },
+    { id: "hardware-master", title: "Hardware Fusion Master ⚡", desc: "Inspected the multimodal ESP32 sensor array architecture." },
+    { id: "credential-verified", title: "Credential Verified 📜", desc: "Verified official Infosys Springboard certification." },
+    { id: "terminal-hacker", title: "Terminal Hacker 💻", desc: "Triggered the secret developer console!" }
+  ],
 
   skills: {
     languages: [
-      { name: "Python", level: "Comfortable", desc: "ML pipelines, Flask API, Data manipulation" },
-      { name: "C++", level: "Comfortable", desc: "ESP32 firmware, System optimization" },
-      { name: "C", level: "Comfortable", desc: "Low-level memory & hardware logic" }
+      { name: "Python", level: "Comfortable", desc: "ML pipelines, Flask API, Data manipulation", key: "python" },
+      { name: "C++", level: "Comfortable", desc: "ESP32 firmware, System optimization", key: "cpp" },
+      { name: "C", level: "Comfortable", desc: "Low-level memory & hardware logic", key: "c" }
     ],
     technologies: [
-      { name: "HTML5", level: "Comfortable", desc: "Semantic layout & accessibility" },
-      { name: "CSS3", level: "Comfortable", desc: "Responsive design & modern styling" },
-      { name: "JavaScript", level: "Building", desc: "DOM manipulation & Chart integrations" }
+      { name: "HTML5", level: "Comfortable", desc: "Semantic layout & accessibility", key: "html" },
+      { name: "CSS3", level: "Comfortable", desc: "Responsive design & modern styling", key: "css" },
+      { name: "JavaScript", level: "Building", desc: "DOM manipulation & Chart integrations", key: "js" }
     ],
     databasesAndTools: [
-      { name: "MySQL", category: "Database" },
-      { name: "PostgreSQL", category: "Database" },
-      { name: "Supabase", category: "Backend / Auth" },
-      { name: "Git", category: "Version Control" },
-      { name: "GitHub", category: "Collaboration" },
-      { name: "VS Code", category: "IDE" }
+      { name: "MySQL", category: "Database", key: "mysql" },
+      { name: "PostgreSQL", category: "Database", key: "postgresql" },
+      { name: "Supabase", category: "Backend / Auth", key: "supabase" },
+      { name: "Git", category: "Version Control", key: "git" },
+      { name: "GitHub", category: "Collaboration", key: "github" },
+      { name: "VS Code", category: "IDE", key: "vscode" }
     ],
     softSkills: [
       "Problem Solving",
@@ -77,14 +86,24 @@ export const PORTFOLIO_DATA = {
     {
       id: "fluencyband-ai",
       title: "FluencyBand AI — Wearable Pre-Stutter Detection System",
-      badge: "Featured Wearable & ML System",
+      badge: "FEATURED BOSS QUEST #01",
+      questLevel: "HARDWARE & ML BOSS FIGHT",
       dates: "25 Mar 2026 – 28 May 2026",
       isFeatured: true,
+
+      // GAMIFIED BOSS FIGHT FRAMEWORK
+      bossFight: {
+        theBoss: "Unpredictable pre-speech bio-signals and acoustic micro-arousals were causing unmanaged stuttering episodes without real-time feedback.",
+        yourWeapons: "ESP32 Multimodal Hardware Sensor Array (MAX30102 PPG, GSR, MPU6050 6-Axis IMU, INMP441 MEMS Microphone), 10-Feature Random Forest ML Pipeline, Flask TCP Backend, and 3-Level Graded Haptic Motor Feedback.",
+        theVictory: "Achieved 92.8% held-out test accuracy, a 500 ms inference processing window, and ~10 ms motor feedback response time."
+      },
+
       metrics: [
-        { label: "Held-Out Test Accuracy", value: "92.8%", sub: "Across Normal, Stressed & Pre-Stutter states" },
-        { label: "Processing Window", value: "500 ms", sub: "Real-time sensor-to-inference latency" },
-        { label: "Motor Response Time", value: "~10 ms", sub: "Graded vibrotactile feedback trigger" }
+        { label: "Held-Out Test Accuracy", value: "92.8%", sub: "Across Normal, Stressed & Pre-Stutter states", highlight: true },
+        { label: "Processing Window", value: "500 ms", sub: "Real-time sensor-to-inference latency", highlight: true },
+        { label: "Motor Response Time", value: "~10 ms", sub: "Graded vibrotactile feedback trigger", highlight: true }
       ],
+
       problem: "Speech stuttering often originates from pre-speech physiological and acoustic micro-arousals. Conventional biofeedback systems lack real-time physiological sensor integration and low-latency motor feedback.",
       solution: "Engineered an integrated multimodal wearable combining physiological (MAX30102, GSR, MPU6050) and acoustic (INMP441) signal acquisition via ESP32. Built a multiclass Random Forest pipeline running on a Python-Flask backend with TCP streaming and 3-level graded vibrotactile feedback.",
       techStack: ["Python", "C++", "ESP32", "Random Forest", "Flask", "TCP", "Arduino", "Scikit-Learn"],
@@ -107,9 +126,18 @@ export const PORTFOLIO_DATA = {
     {
       id: "campuscare-companion",
       title: "CampusCare Companion — Mental Wellness & Peer Support Platform",
-      badge: "Full-Stack Web & Analytics Platform",
+      badge: "EPIC QUEST #02",
+      questLevel: "FULL-STACK & CLOUD QUEST",
       dates: "Nov 2025 – Dec 2025",
       isFeatured: false,
+
+      // GAMIFIED BOSS FIGHT FRAMEWORK
+      bossFight: {
+        theBoss: "University students faced mental health isolation, unmonitored stress spikes, and a lack of privacy-centric peer support systems.",
+        yourWeapons: "Responsive HTML/CSS/JS interface, Supabase Cloud Auth, PostgreSQL database, Local-First storage fallback, Chart.js trend engine, and encrypted anonymous peer-support workflows.",
+        theVictory: "Delivered 7-day/30-day visual progress trends, anonymous peer community threads, and seamless offline data export."
+      },
+
       problem: "University students often struggle with mental well-being, mood tracking, and stress isolation without accessible, privacy-centric peer support systems.",
       solution: "Built a responsive wellness platform integrating mood and energy logging, 7-day/30-day visual progress trends, guided activities, and an anonymous peer-support ecosystem backed by Supabase authentication and PostgreSQL.",
       techStack: ["HTML", "CSS", "JavaScript", "Supabase", "PostgreSQL", "Chart.js"],
@@ -207,8 +235,8 @@ export const PORTFOLIO_DATA = {
       title: "Programming Fundamentals using Python",
       issuer: "Infosys Springboard",
       date: "Jul 2026",
-      image: "/certificates/python.png",
-      document: "/certificates/python.png",
+      image: "./certificates/python.png",
+      document: "./certificates/python.png",
       credentialId: "INF-SPRING-PY2026",
       category: "Programming & Algorithms",
       skills: ["Python Syntax", "Data Structures", "Algorithmic Logic", "Problem Solving"],
@@ -219,8 +247,8 @@ export const PORTFOLIO_DATA = {
       title: "Introduction to Cyber Security",
       issuer: "Infosys Springboard",
       date: "Apr 2026",
-      image: "/certificates/cybersecurity.pdf.png",
-      document: "/certificates/cybersecurity.pdf",
+      image: "./certificates/cybersecurity.pdf.png",
+      document: "./certificates/cybersecurity.pdf",
       credentialId: "INF-SPRING-CS2026",
       category: "Cyber Security & Networks",
       skills: ["Network Security", "Threat Modeling", "Data Privacy", "Cyber Defense"],
@@ -231,8 +259,8 @@ export const PORTFOLIO_DATA = {
       title: "Leadership Fundamentals",
       issuer: "EduTech Hub",
       date: "Oct 2025",
-      image: "/certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf.png",
-      document: "/certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf",
+      image: "./certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf.png",
+      document: "./certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf",
       credentialId: "ETH-LEAD-2025",
       category: "Leadership & Management",
       skills: ["Team Leadership", "Project Coordination", "Communication", "Adaptability"],

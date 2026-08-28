@@ -1,8 +1,8 @@
 import React from 'react';
-import { Terminal, Code, Database, Wrench, HeartHandshake, CheckCircle2 } from 'lucide-react';
+import { Terminal, Code, Database, Wrench, HeartHandshake, CheckCircle2, Filter } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
 
-export default function TechnicalArsenal() {
+export default function TechnicalArsenal({ activeSkillFilter, onSelectSkillFilter }) {
   const { languages, technologies, databasesAndTools, softSkills } = PORTFOLIO_DATA.skills;
 
   return (
@@ -10,16 +10,30 @@ export default function TechnicalArsenal() {
       
       {/* Section Header */}
       <div className="space-y-3 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono tracking-widest uppercase shadow-glow-sm">
           <Terminal className="w-3.5 h-3.5" />
-          <span>Capability Stack</span>
+          <span>// 02. TECHNICAL ARSENAL & SKILL TREE</span>
         </div>
+        
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Technical <span className="text-gradient-emerald">Arsenal</span>
         </h2>
+        
         <p className="text-slate-400 text-base">
-          Proven languages, web technologies, backend databases, and essential developer tools.
+          Click any weapon or tool chip to highlight connected project quests across the portfolio!
         </p>
+
+        {activeSkillFilter && (
+          <div className="pt-2 flex items-center justify-center gap-2">
+            <span className="text-xs font-mono text-emerald-400 font-bold">Active Filter: {activeSkillFilter}</span>
+            <button
+              onClick={() => onSelectSkillFilter(null)}
+              className="text-xs font-mono text-rose-400 underline hover:text-rose-300"
+            >
+              Clear Filter
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Grid Layout */}
@@ -35,7 +49,15 @@ export default function TechnicalArsenal() {
           </div>
           <div className="space-y-3">
             {languages.map((lang) => (
-              <div key={lang.name} className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+              <div 
+                key={lang.name}
+                onClick={() => onSelectSkillFilter(lang.name)}
+                className={`p-3 rounded-xl bg-slate-900/80 border cursor-pointer transition-all space-y-1 ${
+                  activeSkillFilter && activeSkillFilter.toLowerCase() === lang.name.toLowerCase()
+                    ? 'border-emerald-400 bg-emerald-500/10 shadow-glow-sm'
+                    : 'border-slate-800 hover:border-emerald-500/40'
+                }`}
+              >
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold text-white font-mono">{lang.name}</span>
                   <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono">
@@ -58,7 +80,15 @@ export default function TechnicalArsenal() {
           </div>
           <div className="space-y-3">
             {technologies.map((tech) => (
-              <div key={tech.name} className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1">
+              <div 
+                key={tech.name}
+                onClick={() => onSelectSkillFilter(tech.name)}
+                className={`p-3 rounded-xl bg-slate-900/80 border cursor-pointer transition-all space-y-1 ${
+                  activeSkillFilter && activeSkillFilter.toLowerCase() === tech.name.toLowerCase()
+                    ? 'border-cyan-400 bg-cyan-500/10 shadow-glow-sm'
+                    : 'border-slate-800 hover:border-cyan-500/40'
+                }`}
+              >
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-bold text-white font-mono">{tech.name}</span>
                   <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 font-mono">
@@ -81,7 +111,15 @@ export default function TechnicalArsenal() {
           </div>
           <div className="grid grid-cols-1 gap-2">
             {databasesAndTools.map((tool) => (
-              <div key={tool.name} className="p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center justify-between">
+              <div 
+                key={tool.name}
+                onClick={() => onSelectSkillFilter(tool.name)}
+                className={`p-2.5 rounded-lg bg-slate-900/80 border cursor-pointer transition-all flex items-center justify-between ${
+                  activeSkillFilter && activeSkillFilter.toLowerCase() === tool.name.toLowerCase()
+                    ? 'border-teal-400 bg-teal-500/10 shadow-glow-sm'
+                    : 'border-slate-800 hover:border-teal-500/40'
+                }`}
+              >
                 <span className="text-xs font-bold text-slate-200 font-mono">{tool.name}</span>
                 <span className="text-[10px] text-slate-500 font-mono">{tool.category}</span>
               </div>
