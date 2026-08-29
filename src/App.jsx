@@ -13,6 +13,7 @@ import BeyondCode from './components/sections/BeyondCode';
 import Certifications from './components/sections/Certifications';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
+import AchievementsSection from './components/sections/AchievementsSection';
 
 import ResumeModal from './components/ui/ResumeModal';
 import FluencyBandModal from './components/ui/FluencyBandModal';
@@ -30,6 +31,7 @@ export default function App() {
 
   // Skill filter state across page
   const [activeSkillFilter, setActiveSkillFilter] = useState(null);
+  const [skillClicksCount, setSkillClicksCount] = useState(0);
 
   // Achievement System State
   const [activeAchievement, setActiveAchievement] = useState(null);
@@ -84,6 +86,13 @@ export default function App() {
 
   const handleSelectSkillFilter = (skillName) => {
     setActiveSkillFilter(skillName);
+    const newCount = skillClicksCount + 1;
+    setSkillClicksCount(newCount);
+
+    if (newCount >= 3) {
+      triggerAchievement('tech-explorer');
+    }
+
     const workElem = document.getElementById('work');
     if (workElem) {
       workElem.scrollIntoView({ behavior: 'smooth' });
@@ -136,6 +145,8 @@ export default function App() {
             setActiveCert(cert);
           }} 
         />
+
+        <AchievementsSection unlockedIds={unlockedIds} />
 
         <Education />
 

@@ -6,7 +6,7 @@ export const PORTFOLIO_DATA = {
     university: "Lovely Professional University",
     period: "August 2025 – Present",
     tagline: "Engineering multimodal bio-signal hardware arrays, low-latency Random Forest ML pipelines, and cloud-synchronized web platforms.",
-    bio: "I am a B.Tech Computer Science & Engineering student specializing in AI & ML at Lovely Professional University. I focus on **bridging the gap between hardware sensor arrays and machine learning pipelines**, translating complex bio-signals into **real-time low-latency feedback systems**.",
+    bio: "I am a B.Tech Computer Science & Engineering student specializing in **AI & Machine Learning** at Lovely Professional University. I focus on **bridging the gap between hardware sensor arrays and ML models**, translating complex bio-signals into **real-time low-latency feedback systems**.",
     location: "Punjab, India",
     email: "aryanpriyadarshi.dev@gmail.com",
     github: "https://github.com/aryanpriyadarshi",
@@ -17,9 +17,10 @@ export const PORTFOLIO_DATA = {
   },
 
   achievements: [
-    { id: "deep-diver", title: "The Deep Diver 🏆", desc: "Explored the entire stack from Hero down to Contact." },
-    { id: "hardware-master", title: "Hardware Fusion Master ⚡", desc: "Inspected the multimodal ESP32 sensor array architecture." },
-    { id: "credential-verified", title: "Credential Verified 📜", desc: "Verified official Infosys Springboard certification." },
+    { id: "deep-diver", title: "The Deep Diver 🏆", desc: "Explored the entire stack down to the footer!" },
+    { id: "tech-explorer", title: "Tech Explorer 🗺️", desc: "Surveyed 3 different skill chips in the Technical Arsenal!" },
+    { id: "hardware-master", title: "Hardware Fusion Master ⚡", desc: "Inspected the multimodal ESP32 sensor array architecture!" },
+    { id: "credential-verified", title: "Credential Verified 📜", desc: "Verified official Infosys Springboard certification!" },
     { id: "terminal-hacker", title: "Terminal Hacker 💻", desc: "Triggered the secret developer console!" }
   ],
 
@@ -91,7 +92,6 @@ export const PORTFOLIO_DATA = {
       dates: "25 Mar 2026 – 28 May 2026",
       isFeatured: true,
 
-      // GAMIFIED BOSS FIGHT FRAMEWORK
       bossFight: {
         theBoss: "Unpredictable pre-speech bio-signals and acoustic micro-arousals were causing unmanaged stuttering episodes without real-time feedback.",
         yourWeapons: "ESP32 Multimodal Hardware Sensor Array (MAX30102 PPG, GSR, MPU6050 6-Axis IMU, INMP441 MEMS Microphone), 10-Feature Random Forest ML Pipeline, Flask TCP Backend, and 3-Level Graded Haptic Motor Feedback.",
@@ -121,7 +121,7 @@ export const PORTFOLIO_DATA = {
         { name: "INMP441", type: "I2S MEMS Microphone", function: "Acoustic audio signal capture & spectral feature extraction" }
       ],
       githubUrl: "https://github.com/aryanpriyadarshi/fluencyband-ai",
-      demoAvailable: false
+      demoAvailable: true
     },
     {
       id: "campuscare-companion",
@@ -131,7 +131,6 @@ export const PORTFOLIO_DATA = {
       dates: "Nov 2025 – Dec 2025",
       isFeatured: false,
 
-      // GAMIFIED BOSS FIGHT FRAMEWORK
       bossFight: {
         theBoss: "University students faced mental health isolation, unmonitored stress spikes, and a lack of privacy-centric peer support systems.",
         yourWeapons: "Responsive HTML/CSS/JS interface, Supabase Cloud Auth, PostgreSQL database, Local-First storage fallback, Chart.js trend engine, and encrypted anonymous peer-support workflows.",

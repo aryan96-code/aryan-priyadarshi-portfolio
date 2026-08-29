@@ -17,6 +17,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../../data/portfolioData';
+import FluencyBandLiveDemo from '../ui/FluencyBandLiveDemo';
 
 export default function SelectedWork({ onOpenFluencyBandModal, activeSkillFilter, onClearSkillFilter }) {
   const fluencyBand = PORTFOLIO_DATA.projects.find(p => p.id === 'fluencyband-ai');
@@ -140,6 +141,9 @@ export default function SelectedWork({ onOpenFluencyBandModal, activeSkillFilter
               </p>
             </div>
           </div>
+
+          {/* REAL-TIME BIO-SIGNAL HARDWARE DEMO WIDGET */}
+          <FluencyBandLiveDemo />
 
           {/* KEY METRICS GRID - HIGH VISUAL POP */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
