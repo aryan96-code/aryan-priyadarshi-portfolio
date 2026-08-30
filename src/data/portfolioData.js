@@ -153,8 +153,8 @@ export const PORTFOLIO_DATA = {
 
   communityTeaching: {
     title: "Community Development Project — Introduction to Python Programming",
-    organization: "Gurukul, Sijua",
-    location: "Sijua, Jharkhand",
+    organization: "",
+    location: "",
     dates: "17 Jul 2026 – 25 Jul 2026",
     quote: "I don't just build with technology — I enjoy helping others understand it.",
     stats: [
@@ -163,7 +163,7 @@ export const PORTFOLIO_DATA = {
       { label: "Audience", value: "Classes 11–12", sub: "High school students" }
     ],
     details: [
-      "Facilitated a six-day Python programming workshop for high school students at Gurukul, Sijua as part of a community development initiative.",
+      "Facilitated a six-day Python programming workshop for high school students as part of a community development initiative.",
       "Delivered 15 hours of structured instruction covering Python syntax, data types, variables, input/output, conditional logic, and loops.",
       "Used live coding demonstrations, hands-on exercises, and interactive Q&A to make concepts accessible.",
       "Designed sessions for students with no prior programming background."
@@ -216,7 +216,7 @@ export const PORTFOLIO_DATA = {
     {
       year: "Jul 2026",
       title: "Python Teaching Initiative",
-      subtitle: "Gurukul, Sijua",
+      subtitle: "Community Development Project",
       desc: "Facilitated 15 hours of Python programming instruction over 6 days for Classes 11–12 students.",
       type: "community"
     }

@@ -26,7 +26,7 @@ export default function BeyondCode() {
           "{data.quote}"
         </blockquote>
         <p className="text-xs font-mono text-teal-400 font-bold">
-          Community Teaching Initiative • Gurukul, Sijua (LPU)
+          Community Teaching Initiative
         </p>
       </div>
 
@@ -56,7 +56,6 @@ export default function BeyondCode() {
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight pt-2">
                 {data.title}
               </h3>
-              <p className="text-xs font-mono text-slate-400">{data.organization} • {data.location}</p>
             </div>
 
             <div className="space-y-3 pt-2">
@@ -69,9 +68,8 @@ export default function BeyondCode() {
             </div>
           </div>
 
-          <div className="pt-4 border-t border-slate-800 text-xs font-mono text-slate-400 flex items-center justify-between">
+          <div className="pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
             <span>Focus Area: Python Syntax & Computational Thinking</span>
-            <span className="text-teal-400 font-semibold">Gurukul Sijua</span>
           </div>
         </div>
 
