@@ -280,7 +280,7 @@ export const PORTFOLIO_DATA = {
       id: "msy-college",
       institution: "Mahesh Singh Yadav College",
       degree: "Senior Secondary (12th)",
-      duration: "Completed: 2025",
+      duration: "Completed: 2024",
       location: "Gaya, Bihar, India",
       focus: [
         "Board: Bihar School Examination Board (BSEB)",
@@ -292,7 +292,7 @@ export const PORTFOLIO_DATA = {
       id: "dps-gaya",
       institution: "Delhi Public School, Gaya",
       degree: "Matriculation (10th)",
-      duration: "Completed: 2024",
+      duration: "Completed: 2022",
       location: "Gaya, Bihar, India",
       focus: [
         "Board: Central Board of Secondary Education (CBSE)",
