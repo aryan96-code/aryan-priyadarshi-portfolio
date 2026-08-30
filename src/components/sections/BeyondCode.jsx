@@ -12,7 +12,7 @@ export default function BeyondCode() {
       <div className="space-y-3 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs font-mono tracking-widest uppercase shadow-glow-sm">
           <Heart className="w-3.5 h-3.5" />
-          <span>// 05. BEYOND CODE (COMMUNITY QUEST)</span>
+
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Beyond <span className="text-gradient-cyan">Code</span>

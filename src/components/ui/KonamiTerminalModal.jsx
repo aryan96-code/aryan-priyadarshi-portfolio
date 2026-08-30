@@ -39,22 +39,19 @@ export default function KonamiTerminalModal({ isOpen, onClose }) {
       ];
     } else if (cmd === 'stats') {
       response = [
-        "--------------------------------------------------",
-        "OPERATIVE STATS — ARYAN PRIYADARSHI",
-        "Class: B.Tech CSE (AI & ML) Engineer",
-        "Level: 25 | XP: 9,280 / 10,000",
-        "Main Weapon: ESP32 Hardware & Random Forest Pipeline",
-        "Special Ability: Low-Latency Signal Fusion (<500ms)",
-        "Stamina: 100% | Focus: 100%",
-        "--------------------------------------------------"
+        "----------------------------------------",
+        "Developer: Aryan Priyadarshi",
+        "Role: B.Tech CSE (AI & ML) Engineer",
+        "Projects: FluencyBand AI, CampusCare",
+        "Core Skills: Embedded Systems, Machine Learning, Full-Stack Web Development",
+        "----------------------------------------"
       ];
     } else if (cmd === 'quest') {
       response = [
-        "ACTIVE QUEST #01: FluencyBand AI Wearable",
-        "  Boss: Pre-Stutter Bio-Signal Prediction",
-        "  Test Accuracy: 92.8% Held-Out Test Set",
-        "  Haptic Feedback Latency: ~10ms Motor Response",
-        "Status: COMPLETED (VICTORY)"
+        "PROJECT: FluencyBand AI Wearable",
+        "Test Accuracy: 92.8% (held-out test set)",
+        "Latency: ~10ms motor response",
+        "Status: Completed"
       ];
     } else if (cmd === 'skills') {
       response = [

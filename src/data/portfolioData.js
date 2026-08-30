@@ -1,39 +1,45 @@
 export const PORTFOLIO_DATA = {
   personal: {
     name: "Aryan Priyadarshi",
-    role: "Computer Science Student & Developer",
+    role: "Computer Science & Engineering Student",
     degree: "B.Tech — Computer Science & Engineering (AI & ML)",
     university: "Lovely Professional University",
     period: "August 2025 – Present",
-    tagline: "Engineering multimodal bio-signal hardware arrays, low-latency Random Forest ML pipelines, and cloud-synchronized web platforms.",
-    bio: "I am a B.Tech Computer Science & Engineering student specializing in **AI & Machine Learning** at Lovely Professional University. I focus on **bridging the gap between hardware sensor arrays and ML models**, translating complex bio-signals into **real-time low-latency feedback systems**.",
+    tagline: "Building practical systems where software meets real-world problems.",
+    bio: "I'm Aryan, a Computer Science & Engineering student specializing in AI & ML at Lovely Professional University. I enjoy building practical systems where software meets real-world problems — from wearable hardware and machine learning to web applications and databases. I'm currently strengthening my foundations in programming, DSA and web development while learning by building real projects.",
     location: "Punjab, India",
     email: "aryanpriyadarshi.dev@gmail.com",
-    github: "https://github.com/aryanpriyadarshi",
+    github: "https://github.com/aryan96-code",
     linkedin: "https://linkedin.com/in/aryan-priyadarshi",
-    statusBadge: "Actively Learning & Building Real Projects",
-    level: "LVL 25 STUDENT ENGINEER",
-    xp: "9,280 / 10,000 XP"
+    statusBadge: "Currently learning & building"
   },
 
+  // Easter egg achievements — hidden, triggered by subtle interactions
   achievements: [
-    { id: "deep-diver", title: "The Deep Diver 🏆", desc: "Explored the entire stack down to the footer!" },
-    { id: "tech-explorer", title: "Tech Explorer 🗺️", desc: "Surveyed 3 different skill chips in the Technical Arsenal!" },
-    { id: "hardware-master", title: "Hardware Fusion Master ⚡", desc: "Inspected the multimodal ESP32 sensor array architecture!" },
-    { id: "credential-verified", title: "Credential Verified 📜", desc: "Verified official Infosys Springboard certification!" },
-    { id: "terminal-hacker", title: "Terminal Hacker 💻", desc: "Triggered the secret developer console!" }
+    { id: "deep-diver", title: "Deep Diver", desc: "Explored the entire portfolio!" },
+    { id: "tech-explorer", title: "Tech Explorer", desc: "Explored 3+ skills in the stack." },
+    { id: "hardware-master", title: "Hardware Curious", desc: "Dove into the sensor architecture." },
+    { id: "credential-verified", title: "Credential Checked", desc: "Verified a certification." },
+    { id: "terminal-hacker", title: "Terminal Unlocked", desc: "Found the hidden developer console." }
+  ],
+
+  // Key highlights — real, verifiable numbers
+  highlights: [
+    { value: "2", label: "Major Projects", sub: "Hardware & Web" },
+    { value: "92.8%", label: "Best ML Accuracy", sub: "Held-out test set" },
+    { value: "15 hrs", label: "Python Teaching", sub: "6-day initiative" },
+    { value: "3", label: "Certifications", sub: "Infosys & EduTech Hub" }
   ],
 
   skills: {
     languages: [
-      { name: "Python", level: "Comfortable", desc: "ML pipelines, Flask API, Data manipulation", key: "python" },
-      { name: "C++", level: "Comfortable", desc: "ESP32 firmware, System optimization", key: "cpp" },
-      { name: "C", level: "Comfortable", desc: "Low-level memory & hardware logic", key: "c" }
+      { name: "Python", level: "Comfortable", desc: "ML pipelines, Flask APIs, data processing", key: "python" },
+      { name: "C++", level: "Comfortable", desc: "ESP32 firmware, system-level logic", key: "cpp" },
+      { name: "C", level: "Comfortable", desc: "Low-level programming fundamentals", key: "c" }
     ],
     technologies: [
-      { name: "HTML5", level: "Comfortable", desc: "Semantic layout & accessibility", key: "html" },
-      { name: "CSS3", level: "Comfortable", desc: "Responsive design & modern styling", key: "css" },
-      { name: "JavaScript", level: "Building", desc: "DOM manipulation & Chart integrations", key: "js" }
+      { name: "HTML", level: "Comfortable", desc: "Semantic markup and page structure", key: "html" },
+      { name: "CSS", level: "Comfortable", desc: "Responsive design and modern styling", key: "css" }
     ],
     databasesAndTools: [
       { name: "MySQL", category: "Database", key: "mysql" },
@@ -54,125 +60,113 @@ export const PORTFOLIO_DATA = {
     {
       category: "Data Structures & Algorithms",
       status: "Learning",
-      badgeColor: "cyan",
-      focus: "Algorithmic efficiency, recursion, and core data structures in C++ & Python."
+      focus: "Core data structures, recursion, and algorithmic problem-solving in C++ and Python."
     },
     {
       category: "Web Development",
       status: "Building",
-      badgeColor: "emerald",
-      focus: "Full-stack web workflows, responsive component design, and API integrations."
+      focus: "Responsive design, HTML/CSS/JS fundamentals, and integrating backend services."
     },
     {
-      category: "Python Ecosystem",
-      status: "Comfortable",
-      badgeColor: "teal",
-      focus: "Data analytics, signal processing, Flask backends, and scikit-learn pipelines."
+      category: "Python",
+      status: "Strengthening",
+      focus: "Applied Python for data processing, scripting, signal analysis, and Flask backends."
     },
     {
-      category: "Databases & Cloud",
+      category: "Databases",
       status: "Building",
-      badgeColor: "emerald",
-      focus: "Relational database design in PostgreSQL/MySQL, local-first syncing with Supabase."
+      focus: "Relational database design with PostgreSQL and MySQL, cloud sync with Supabase."
     },
     {
       category: "AI & Machine Learning",
-      status: "Learning",
-      badgeColor: "cyan",
-      focus: "Multiclass classification, bio-signal feature extraction, and real-time model inference."
+      status: "Exploring",
+      focus: "Classification models, feature extraction, and applying ML to real hardware problems."
     }
   ],
 
   projects: [
     {
       id: "fluencyband-ai",
-      title: "FluencyBand AI — Wearable Pre-Stutter Detection System",
-      badge: "FEATURED BOSS QUEST #01",
-      questLevel: "HARDWARE & ML BOSS FIGHT",
-      dates: "25 Mar 2026 – 28 May 2026",
+      title: "FluencyBand AI",
+      subtitle: "Wearable Pre-Stutter Detection System",
+      number: "01",
+      dates: "Mar 2026 – May 2026",
       isFeatured: true,
 
-      bossFight: {
-        theBoss: "Unpredictable pre-speech bio-signals and acoustic micro-arousals were causing unmanaged stuttering episodes without real-time feedback.",
-        yourWeapons: "ESP32 Multimodal Hardware Sensor Array (MAX30102 PPG, GSR, MPU6050 6-Axis IMU, INMP441 MEMS Microphone), 10-Feature Random Forest ML Pipeline, Flask TCP Backend, and 3-Level Graded Haptic Motor Feedback.",
-        theVictory: "Achieved 92.8% held-out test accuracy, a 500 ms inference processing window, and ~10 ms motor feedback response time."
-      },
+      summary: "A multimodal wearable that detects pre-stutter physiological signals in real time and delivers haptic biofeedback via an ESP32-based hardware array and a Python Random Forest pipeline.",
 
       metrics: [
-        { label: "Held-Out Test Accuracy", value: "92.8%", sub: "Across Normal, Stressed & Pre-Stutter states", highlight: true },
-        { label: "Processing Window", value: "500 ms", sub: "Real-time sensor-to-inference latency", highlight: true },
-        { label: "Motor Response Time", value: "~10 ms", sub: "Graded vibrotactile feedback trigger", highlight: true }
+        { label: "Held-Out Test Accuracy", value: "92.8%", sub: "Normal / Stressed / Pre-Stutter classification" },
+        { label: "Processing Window", value: "500 ms", sub: "Sensor-to-inference latency" },
+        { label: "Vibrotactile Response", value: "~10 ms", sub: "Graded haptic motor feedback" }
       ],
 
-      problem: "Speech stuttering often originates from pre-speech physiological and acoustic micro-arousals. Conventional biofeedback systems lack real-time physiological sensor integration and low-latency motor feedback.",
-      solution: "Engineered an integrated multimodal wearable combining physiological (MAX30102, GSR, MPU6050) and acoustic (INMP441) signal acquisition via ESP32. Built a multiclass Random Forest pipeline running on a Python-Flask backend with TCP streaming and 3-level graded vibrotactile feedback.",
+      problem: "Speech stuttering is often preceded by measurable physiological changes — elevated heart rate, skin conductance shifts, and micro-tremors — that occur before a stutter event. Existing biofeedback systems don't capture this in real time.",
+      solution: "Built a wearable system using MAX30102, GSR, MPU6050, and INMP441 sensors on ESP32 to stream multi-channel physiological data to a Python Flask backend. A 10-feature Random Forest classifier distinguishes Normal, Stressed, and Pre-Stutter states, triggering graded haptic motor feedback.",
+
       techStack: ["Python", "C++", "ESP32", "Random Forest", "Flask", "TCP", "Arduino", "Scikit-Learn"],
       highlights: [
-        "Multimodal hardware acquisition using MAX30102 (PPG), GSR (skin response), MPU6050 (motion), and INMP441 (acoustic).",
-        "Feature extraction pipeline extracting 10 distinct physiological and acoustic signal features.",
-        "Multiclass Random Forest classification discriminating Normal, Stressed, and Pre-Stutter physiological states.",
-        "TCP streaming protocol with Flask backend maintaining prediction within a strict 500ms processing window.",
-        "Closed-loop feedback delivering graded motor responses within ~10ms of state detection."
+        "Multi-sensor acquisition: MAX30102 (optical pulse), GSR (skin conductance), MPU6050 (6-axis motion), INMP441 (MEMS audio).",
+        "10-feature extraction pipeline across physiological and acoustic signal domains.",
+        "Multiclass Random Forest classifier: Normal, Stressed, and Pre-Stutter states.",
+        "Flask TCP streaming backend maintaining inference within a 500 ms window.",
+        "Closed-loop graded haptic feedback response within ~10 ms of state detection."
       ],
       sensors: [
-        { name: "MAX30102", type: "Optical Pulse & Oximetry", function: "Heart rate variability & blood volume pulse acquisition" },
-        { name: "GSR Sensor", type: "Galvanic Skin Response", function: "Electrodermal activity & emotional arousal tracking" },
-        { name: "MPU6050", type: "6-Axis IMU", function: "Head/neck micro-tremors & motion artifact filtering" },
-        { name: "INMP441", type: "I2S MEMS Microphone", function: "Acoustic audio signal capture & spectral feature extraction" }
+        { name: "MAX30102", type: "Optical Pulse & Oximetry", function: "Heart rate variability & blood volume pulse" },
+        { name: "GSR Sensor", type: "Galvanic Skin Response", function: "Electrodermal activity & arousal tracking" },
+        { name: "MPU6050", type: "6-Axis IMU", function: "Head/neck micro-tremors & motion filtering" },
+        { name: "INMP441", type: "I2S MEMS Mic", function: "Acoustic signal capture & spectral features" }
       ],
-      githubUrl: "https://github.com/aryanpriyadarshi/fluencyband-ai",
-      demoAvailable: true
+      githubUrl: "https://github.com/aryan96-code/stutter-detection"
     },
     {
       id: "campuscare-companion",
-      title: "CampusCare Companion — Mental Wellness & Peer Support Platform",
-      badge: "EPIC QUEST #02",
-      questLevel: "FULL-STACK & CLOUD QUEST",
+      title: "CampusCare Companion",
+      subtitle: "Mental Wellness & Peer Support Platform",
+      number: "02",
       dates: "Nov 2025 – Dec 2025",
       isFeatured: false,
 
-      bossFight: {
-        theBoss: "University students faced mental health isolation, unmonitored stress spikes, and a lack of privacy-centric peer support systems.",
-        yourWeapons: "Responsive HTML/CSS/JS interface, Supabase Cloud Auth, PostgreSQL database, Local-First storage fallback, Chart.js trend engine, and encrypted anonymous peer-support workflows.",
-        theVictory: "Delivered 7-day/30-day visual progress trends, anonymous peer community threads, and seamless offline data export."
-      },
+      summary: "A web platform for university students to log mood and energy, track wellness trends over 7 and 30 days, and participate in anonymous peer support — backed by Supabase and PostgreSQL.",
 
-      problem: "University students often struggle with mental well-being, mood tracking, and stress isolation without accessible, privacy-centric peer support systems.",
-      solution: "Built a responsive wellness platform integrating mood and energy logging, 7-day/30-day visual progress trends, guided activities, and an anonymous peer-support ecosystem backed by Supabase authentication and PostgreSQL.",
+      problem: "University students often lack accessible tools to monitor their mental well-being or seek peer support in a private, low-pressure way.",
+      solution: "Built a responsive web app with HTML, CSS, and JavaScript, using Supabase authentication and PostgreSQL for persistent data storage. Includes daily mood/energy logging, Chart.js analytics dashboards, guided wellness activities, anonymous peer discussion, and local-first storage with CSV/JSON export.",
+
       techStack: ["HTML", "CSS", "JavaScript", "Supabase", "PostgreSQL", "Chart.js"],
       highlights: [
-        "Integrated Supabase Auth with PostgreSQL-backed cloud synchronization for persistent wellness logs.",
-        "Built privacy-first anonymous peer-support workflow allowing secure student interaction.",
-        "Interactive 7-day trend analysis and 30-day visual historical progress using Chart.js.",
-        "Local-first storage fallback allowing seamless offline mood logging and full JSON/CSV data export."
+        "Supabase authentication with PostgreSQL-backed cloud sync for persistent wellness logs.",
+        "7-day and 30-day visual trend dashboards built with Chart.js.",
+        "Anonymous peer support threads — no user identity revealed.",
+        "Local-first storage fallback for offline mood logging.",
+        "One-click JSON and CSV data export for personal records."
       ],
       features: [
-        { title: "Mood & Energy Logger", desc: "Daily multi-parameter tracking for stress, energy, and emotional states." },
-        { title: "Anonymous Peer Support", desc: "Encrypted community discussion threads without revealing user identity." },
-        { title: "Analytics Dashboard", desc: "7-day trend graphs and 30-day behavioral pattern visualizations." },
-        { title: "Data Privacy & Export", desc: "Local storage fallback and one-click data export." }
+        { title: "Mood & Energy Logger", desc: "Daily tracking for mood, stress level, and energy — logged with timestamps." },
+        { title: "Peer Support", desc: "Anonymous discussion threads for students to share and support each other." },
+        { title: "Progress Analytics", desc: "7-day and 30-day visualizations using Chart.js." },
+        { title: "Offline & Export", desc: "Local-first storage fallback and one-click JSON/CSV data export." }
       ],
-      githubUrl: "https://github.com/aryanpriyadarshi/campuscare-companion",
-      demoAvailable: false
+      githubUrl: "https://github.com/aryan96-code/mental-health-companion"
     }
   ],
 
   communityTeaching: {
     title: "Community Development Project — Introduction to Python Programming",
-    organization: "Lovely Professional University & Gurukul, Sijua",
-    location: "Gurukul, Sijua",
+    organization: "Gurukul, Sijua",
+    location: "Sijua, Jharkhand",
     dates: "17 Jul 2026 – 25 Jul 2026",
     quote: "I don't just build with technology — I enjoy helping others understand it.",
     stats: [
-      { label: "Duration", value: "6 Days", sub: "Structured initiative" },
-      { label: "Instruction Hours", value: "15 Hours", sub: "Live interactive teaching" },
-      { label: "Target Cohort", value: "Classes 11–12", sub: "High school students" }
+      { label: "Duration", value: "6 Days", sub: "Structured sessions" },
+      { label: "Teaching Hours", value: "15 Hours", sub: "Live instruction" },
+      { label: "Audience", value: "Classes 11–12", sub: "High school students" }
     ],
     details: [
-      "Facilitated a six-day Python programming workshop empowering high school students with fundamental computational thinking.",
-      "Delivered 15 hours of structured classroom instruction and hands-on coding practice.",
-      "Covered core topics: Python syntax, variable scopes, data types, input/output operations, logical operators, and conditional decision-making.",
-      "Utilized live coding demonstrations, interactive Q&A, problem-solving drills, and revision exercises."
+      "Facilitated a six-day Python programming workshop for high school students at Gurukul, Sijua as part of a community development initiative.",
+      "Delivered 15 hours of structured instruction covering Python syntax, data types, variables, input/output, conditional logic, and loops.",
+      "Used live coding demonstrations, hands-on exercises, and interactive Q&A to make concepts accessible.",
+      "Designed sessions for students with no prior programming background."
     ]
   },
 
@@ -181,49 +175,49 @@ export const PORTFOLIO_DATA = {
       year: "Aug 2025",
       title: "Started B.Tech CSE (AI & ML) at LPU",
       subtitle: "Lovely Professional University",
-      desc: "Commenced undergraduate studies in Computer Science & Engineering with specialization in Artificial Intelligence & Machine Learning.",
+      desc: "Commenced undergraduate studies in Computer Science & Engineering with specialization in AI & ML.",
       type: "education"
     },
     {
       year: "Oct 2025",
       title: "Leadership Fundamentals Certification",
       subtitle: "EduTech Hub",
-      desc: "Earned certification in team dynamics, project coordination, and technical communication.",
+      desc: "Completed certification covering team dynamics, coordination, and communication.",
       type: "certification"
     },
     {
       year: "Nov – Dec 2025",
-      title: "Engineered CampusCare Companion",
-      subtitle: "Full-Stack Web & Wellness Platform",
-      desc: "Developed a mood tracking and anonymous peer-support platform using HTML/CSS, JS, Supabase, PostgreSQL, and Chart.js.",
+      title: "Built CampusCare Companion",
+      subtitle: "Mental Wellness Web Platform",
+      desc: "Developed a mood tracking and peer support web platform using HTML/CSS/JS, Supabase, PostgreSQL, and Chart.js.",
       type: "project"
     },
     {
       year: "Mar – May 2026",
-      title: "Engineered FluencyBand AI Wearable",
-      subtitle: "Multimodal Pre-Stutter Biofeedback System",
-      desc: "Designed and built an ESP32 wearable hardware sensor array, 10-feature Random Forest ML pipeline, Flask TCP backend, and ~10ms motor response feedback system.",
+      title: "Built FluencyBand AI Wearable",
+      subtitle: "Multimodal Pre-Stutter Detection System",
+      desc: "Designed and built an ESP32 wearable sensor array with a Random Forest ML pipeline achieving 92.8% held-out accuracy and ~10 ms haptic feedback.",
       type: "project"
     },
     {
       year: "Apr 2026",
-      title: "Introduction to Cyber Security Certification",
+      title: "Introduction to Cyber Security",
       subtitle: "Infosys Springboard",
-      desc: "Completed coursework covering fundamental security concepts, network defense principles, and data privacy protocols.",
+      desc: "Completed coursework covering fundamental security concepts, network defense, and data privacy.",
       type: "certification"
     },
     {
       year: "Jul 2026",
       title: "Programming Fundamentals using Python",
       subtitle: "Infosys Springboard",
-      desc: "Achieved certification validating object-oriented programming, data structures, and algorithmic logic in Python.",
+      desc: "Certification covering object-oriented programming, data structures, and algorithmic logic in Python.",
       type: "certification"
     },
     {
       year: "Jul 2026",
-      title: "Facilitated Python Teaching Initiative",
-      subtitle: "Gurukul, Sijua (Community Development Project)",
-      desc: "Delivered 15 hours of structured Python instruction over 6 days to high school students (Classes 11–12).",
+      title: "Python Teaching Initiative",
+      subtitle: "Gurukul, Sijua",
+      desc: "Facilitated 15 hours of Python programming instruction over 6 days for Classes 11–12 students.",
       type: "community"
     }
   ],
@@ -237,9 +231,9 @@ export const PORTFOLIO_DATA = {
       image: "./certificates/python.png",
       document: "./certificates/python.png",
       credentialId: "INF-SPRING-PY2026",
-      category: "Programming & Algorithms",
-      skills: ["Python Syntax", "Data Structures", "Algorithmic Logic", "Problem Solving"],
-      desc: "Comprehensive assessment covering core Python concepts, object-oriented principles, algorithmic problem solving, and data structures."
+      category: "Programming",
+      skills: ["Python", "Data Structures", "Algorithmic Logic", "Problem Solving"],
+      desc: "Covers core Python concepts, object-oriented principles, and algorithmic problem solving."
     },
     {
       id: "cert-cybersecurity",
@@ -249,9 +243,9 @@ export const PORTFOLIO_DATA = {
       image: "./certificates/cybersecurity.pdf.png",
       document: "./certificates/cybersecurity.pdf",
       credentialId: "INF-SPRING-CS2026",
-      category: "Cyber Security & Networks",
-      skills: ["Network Security", "Threat Modeling", "Data Privacy", "Cyber Defense"],
-      desc: "Foundational certification covering network security architecture, cyber threat vectors, encryption fundamentals, and risk mitigation strategies."
+      category: "Cyber Security",
+      skills: ["Network Security", "Threat Awareness", "Data Privacy"],
+      desc: "Foundational certification covering network security concepts, cyber threats, and data privacy fundamentals."
     },
     {
       id: "cert-leadership",
@@ -261,9 +255,9 @@ export const PORTFOLIO_DATA = {
       image: "./certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf.png",
       document: "./certificates/30a0c1d5-3e71-43f5-9bf2-ba91cba4cfc4.pdf",
       credentialId: "ETH-LEAD-2025",
-      category: "Leadership & Management",
-      skills: ["Team Leadership", "Project Coordination", "Communication", "Adaptability"],
-      desc: "Professional training in collaborative leadership, cross-functional project management, team dynamics, and agile decision-making."
+      category: "Leadership",
+      skills: ["Team Leadership", "Project Coordination", "Communication"],
+      desc: "Training in leadership, project coordination, team dynamics, and effective communication."
     }
   ],
 
@@ -274,9 +268,9 @@ export const PORTFOLIO_DATA = {
     location: "Phagwara, Punjab, India",
     focus: [
       "Specialization in Artificial Intelligence & Machine Learning",
-      "Core Computer Science Fundamentals (C, C++, Data Structures)",
-      "Database Systems (MySQL, PostgreSQL)",
-      "Applied Systems Engineering & Multimodal Hardware Integration"
+      "Core Computer Science: C, C++, Data Structures & Algorithms",
+      "Database Systems: MySQL, PostgreSQL",
+      "Applied Engineering: Hardware integration & ML systems"
     ]
   }
 };

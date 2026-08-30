@@ -27,7 +27,7 @@ export default function DeveloperJourney() {
       <div className="space-y-3 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono tracking-widest uppercase shadow-glow-sm">
           <Calendar className="w-3.5 h-3.5" />
-          <span>// 04. QUEST TIMELINE & MILESTONES</span>
+
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Developer <span className="text-gradient-emerald">Journey</span>

@@ -12,7 +12,7 @@ export default function TechnicalArsenal({ activeSkillFilter, onSelectSkillFilte
       <div className="space-y-3 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono tracking-widest uppercase shadow-glow-sm">
           <Terminal className="w-3.5 h-3.5" />
-          <span>// 02. TECHNICAL ARSENAL & SKILL TREE</span>
+
         </div>
         
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
@@ -20,7 +20,7 @@ export default function TechnicalArsenal({ activeSkillFilter, onSelectSkillFilte
         </h2>
         
         <p className="text-slate-400 text-base">
-          Click any weapon or tool chip to highlight connected project quests across the portfolio!
+          Click any skill chip to highlight connected project cards across the portfolio.
         </p>
 
         {activeSkillFilter && (

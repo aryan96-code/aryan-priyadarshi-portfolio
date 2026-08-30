@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code2, ArrowUpRight, Terminal } from 'lucide-react';
-import { PORTFOLIO_DATA } from '../../data/portfolioData';
+import { Menu, X, Terminal } from 'lucide-react';
 
 export default function Navbar({ onOpenResume }) {
   const [scrolled, setScrolled] = useState(false);
@@ -14,18 +13,16 @@ export default function Navbar({ onOpenResume }) {
     { name: 'Learning', href: '#learning' },
     { name: 'Journey', href: '#journey' },
     { name: 'Beyond Code', href: '#beyond-code' },
-    { name: 'Certs', href: '#certs' },
+    { name: 'Certifications', href: '#certs' },
+    { name: 'Education', href: '#education' },
     { name: 'Contact', href: '#contact' },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      // Section intersection observer fallback
       const sections = navLinks.map(link => link.href.substring(1));
       const scrollPosition = window.scrollY + 200;
-
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -38,36 +35,43 @@ export default function Navbar({ onOpenResume }) {
         }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
-    <header 
+    <header
+      role="banner"
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-[#080c14]/85 backdrop-blur-md border-b border-slate-800/80 py-3.5 shadow-2xl shadow-black/50' 
+        scrolled
+          ? 'bg-[#080c14]/90 backdrop-blur-md border-b border-slate-800/60 py-3 shadow-xl shadow-black/40'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo / Brand */}
-          <a 
-            href="#hero" 
-            className="flex items-center gap-2 group text-white font-bold text-xl tracking-tight"
+          {/* Logo */}
+          <a
+            href="#hero"
+            className="flex items-center gap-2 text-white font-bold text-lg tracking-tight hover:opacity-80 transition-opacity"
+            aria-label="Aryan Priyadarshi — home"
           >
-            <div className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center group-hover:border-emerald-500/50 group-hover:shadow-glow-sm transition-all">
-              <Terminal className="w-5 h-5 text-emerald-400" />
+            <div className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center">
+              <span className="text-emerald-400 font-bold text-sm font-mono">AP</span>
             </div>
-            <span>
-              Aryan<span className="text-emerald-400">.</span>
-            </span>
+            <span>Aryan<span className="text-emerald-400">.</span></span>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-900/60 p-1.5 rounded-full border border-slate-800/80 backdrop-blur-sm">
+          <nav
+            role="navigation"
+            aria-label="Main navigation"
+            className="hidden lg:flex items-center gap-0.5 bg-slate-900/50 p-1.5 rounded-full border border-slate-800/60 backdrop-blur-sm"
+          >
             {navLinks.map((link) => {
               const sectionId = link.href.substring(1);
               const isActive = activeSection === sectionId;
@@ -75,10 +79,11 @@ export default function Navbar({ onOpenResume }) {
                 <a
                   key={link.name}
                   href={link.href}
+                  aria-current={isActive ? 'page' : undefined}
                   className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/30'
-                      : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                      ? 'bg-emerald-500/15 text-emerald-300 border border-emerald-500/25'
+                      : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/50'
                   }`}
                 >
                   {link.name}
@@ -87,23 +92,32 @@ export default function Navbar({ onOpenResume }) {
             })}
           </nav>
 
-          {/* Right Action Button */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Resume Button — desktop */}
+          <div className="hidden lg:flex items-center">
             <button
               onClick={onOpenResume}
-              className="px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500 hover:text-slate-950 transition-all shadow-glow-sm flex items-center gap-1.5"
+              className="px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-all shadow-glow-sm"
+              aria-label="Download resume"
             >
-              <span>Resume</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
+              Resume
             </button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className="flex lg:hidden items-center gap-2">
             <button
+              onClick={() => onOpenResume()}
+              className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-all"
+              aria-label="Download resume"
+            >
+              Resume
+            </button>
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
-              aria-label="Toggle menu"
+              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -113,31 +127,22 @@ export default function Navbar({ onOpenResume }) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0a0f1d] border-b border-slate-800 px-4 pt-3 pb-6 space-y-3">
-          <div className="grid grid-cols-2 gap-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-emerald-400 transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-          <div className="pt-2 border-t border-slate-800">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenResume();
-              }}
-              className="w-full py-2.5 text-center text-xs font-semibold rounded-lg bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-all flex items-center justify-center gap-2"
+        <div
+          id="mobile-menu"
+          role="navigation"
+          aria-label="Mobile navigation"
+          className="lg:hidden bg-[#0a0f1d]/98 border-b border-slate-800 px-4 pt-3 pb-6 space-y-1 backdrop-blur-md"
+        >
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={handleNavClick}
+              className="block px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800/80 hover:text-white transition-colors"
             >
-              <span>Download Resume</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
-          </div>
+              {link.name}
+            </a>
+          ))}
         </div>
       )}
     </header>

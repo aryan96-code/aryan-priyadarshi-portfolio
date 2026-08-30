@@ -13,7 +13,7 @@ import BeyondCode from './components/sections/BeyondCode';
 import Certifications from './components/sections/Certifications';
 import Education from './components/sections/Education';
 import Contact from './components/sections/Contact';
-import AchievementsSection from './components/sections/AchievementsSection';
+import Highlights from './components/sections/Highlights';
 
 import ResumeModal from './components/ui/ResumeModal';
 import FluencyBandModal from './components/ui/FluencyBandModal';
@@ -146,7 +146,7 @@ export default function App() {
           }} 
         />
 
-        <AchievementsSection unlockedIds={unlockedIds} />
+        <Highlights />
 
         <Education />
 

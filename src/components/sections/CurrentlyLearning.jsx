@@ -42,7 +42,7 @@ export default function CurrentlyLearning() {
       <div className="space-y-3 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Active Learning Radar</span>
+          <span>Currently Learning</span>
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
           Currently <span className="text-gradient-cyan">Learning</span>
