@@ -261,16 +261,44 @@ export const PORTFOLIO_DATA = {
     }
   ],
 
-  education: {
-    institution: "Lovely Professional University",
-    degree: "B.Tech — Computer Science & Engineering (AI & ML)",
-    duration: "August 2025 – Present",
-    location: "Phagwara, Punjab, India",
-    focus: [
-      "Specialization in Artificial Intelligence & Machine Learning",
-      "Core Computer Science: C, C++, Data Structures & Algorithms",
-      "Database Systems: MySQL, PostgreSQL",
-      "Applied Engineering: Hardware integration & ML systems"
-    ]
-  }
+  education: [
+    {
+      id: "lpu",
+      institution: "Lovely Professional University",
+      degree: "B.Tech — Computer Science & Engineering (AI & ML)",
+      duration: "August 2025 – Present",
+      location: "Phagwara, Punjab, India",
+      focus: [
+        "Specialization in Artificial Intelligence & Machine Learning",
+        "Core Computer Science: C, C++, Data Structures & Algorithms",
+        "Database Systems: MySQL, PostgreSQL",
+        "Applied Engineering: Hardware integration & ML systems"
+      ],
+      current: true
+    },
+    {
+      id: "msy-college",
+      institution: "Mahesh Singh Yadav College",
+      degree: "Senior Secondary (12th)",
+      duration: "Completed: 2025",
+      location: "Gaya, Bihar, India",
+      focus: [
+        "Board: Bihar School Examination Board (BSEB)",
+        "Stream: Science (Physics, Chemistry, Mathematics)"
+      ],
+      current: false
+    },
+    {
+      id: "dps-gaya",
+      institution: "Delhi Public School, Gaya",
+      degree: "Matriculation (10th)",
+      duration: "Completed: 2024",
+      location: "Gaya, Bihar, India",
+      focus: [
+        "Board: Central Board of Secondary Education (CBSE)",
+        "Core Subjects: Science, Mathematics, English, Social Science"
+      ],
+      current: false
+    }
+  ]
 };

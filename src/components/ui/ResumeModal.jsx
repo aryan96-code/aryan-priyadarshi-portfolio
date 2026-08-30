@@ -6,6 +6,10 @@ export default function ResumeModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleDownload = () => {
+    const educationSection = PORTFOLIO_DATA.education.map(edu => 
+      `${edu.degree}\n${edu.institution} (${edu.duration})`
+    ).join('\n\n');
+
     // Generate text/resume download payload dynamically
     const resumeText = `
 ===================================================================
@@ -18,8 +22,7 @@ LinkedIn: ${PORTFOLIO_DATA.personal.linkedin}
 ===================================================================
 
 EDUCATION
-B.Tech — Computer Science & Engineering (AI & ML)
-Lovely Professional University (August 2025 – Present)
+${educationSection}
 
 TECHNICAL SKILLS
 Languages: Python, C, C++
@@ -90,9 +93,13 @@ CERTIFICATIONS
               <GraduationCap className="w-4 h-4 text-emerald-400" />
               <span>Education</span>
             </h4>
-            <p className="text-slate-300">
-              {PORTFOLIO_DATA.personal.degree} — {PORTFOLIO_DATA.personal.university} ({PORTFOLIO_DATA.personal.period})
-            </p>
+            <div className="space-y-1 text-slate-300">
+              {PORTFOLIO_DATA.education.map((edu, idx) => (
+                <div key={idx} className="text-xs">
+                  • <span className="font-semibold text-white">{edu.degree}</span> — {edu.institution} ({edu.duration})
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
